@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>  
+    <link rel="stylesheet" href="__CSS_PATH__pintuer.css">
+    <link rel="stylesheet" href="__CSS_PATH__admin.css">
+    <script src="__JS_PATH__jquery.js"></script>
+    <script src="__JS_PATH__pintuer.js"></script>  
+</head>
+<body>
+<form method="post" action="index.php?m=admin&c=book&a=book">
+  <div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 评论管理</strong></div>
+    <div class="padding border-bottom">
+      <ul class="search">
+        <li>
+          <input type="submit" name="allx"  class="button border-green" id="checkall" value="全选" /><!--<span class="icon-check"></span>-->
+          <input type="submit" name="piliang" class="button border-red" value= "批量删除" /><!--<span class='icon-trash-o'></span>-->
+        </li>
+      </ul>
+    </div>
+    <table class="table table-hover text-center">
+      <tr>
+        <th width="120">ID</th>
+        <th>姓名</th>       
+        <th>注册时间</th>
+        <th>邮箱</th>
+        <th>注册IP</th>
+        <th width="25%">内容</th>
+         <th width="120">评论时间</th>
+             
+      </tr>
+          {foreach $hblog as $value} 
+        <tr>    
+          <td>
+            <input type="checkbox" name="hid[]" value="{$value['hid']}" />
+          </td>
+          <td>{$value['name']}</td>
+          <td>{$value['zhucetime']}</td>
+          <td>{$value['email']}</td>  
+          <td>{$value['ip']}</td>         
+          <td>{$value['con']}</td>
+          <td>{$value['time']}</td>
+        </tr>
+       {/foreach}
+      <tr>
+        <td colspan="8">
+          <div class="pagelist"> 
+            <a href="{$page['head']}">首页</a> 
+            <a href="{$page['prev']}">上一页</a>
+            <a href="{$page['next']}">下一页</a>
+            <a href="{$page['tail']}">尾页</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+<script type="text/javascript">
+
+function del(id){
+	if(confirm("您确定要删除吗?")){
+		
+	}
+}
+
+$("#checkall").click(function(){ 
+  $("input[name='id[]']").each(function(){
+	  if (this.checked) {
+		  this.checked = false;
+	  }
+	  else {
+		  this.checked = true;
+	  }
+  });
+})
+
+function DelSelect(){
+	var Checkbox=false;
+	 $("input[name='id[]']").each(function(){
+	  if (this.checked==true) {		
+		Checkbox=true;	
+	  }
+	});
+	if (Checkbox){
+		var t=confirm("您确认要删除选中的内容吗？");
+		if (t==false) return false; 		
+	}
+	else{
+		alert("请选择您要删除的内容!");
+		return false;
+	}
+}
+
+</script>
+</body></html>

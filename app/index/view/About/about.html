@@ -1,0 +1,147 @@
+
+<!DOCTYPE html lang="en-US">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>about</title>
+
+<link rel='stylesheet' id='reset-css'  href='__CSS_PATH__reset.css' type='text/css' media='all' />
+<link rel='stylesheet' id='superfish-css'  href='__CSS_PATH__superfish.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawsome-css'  href='__CSS_PATH__font-awsome/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='orbit-css-css'  href='__CSS_PATH__orbit.css' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='__CSS_PATH__style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='color-scheme-css'  href='__CSS_PATH__color/green.css' type='text/css' media='all' />
+<link rel="stylesheet" href="__CSS_PATH__zerogrid.css" type="text/css" media="screen">
+<link rel="stylesheet" href="__CSS_PATH__responsive.css" type="text/css" media="screen">
+<script type='text/javascript' src='__JS_PATH__jquery.js'></script>
+<script type='text/javascript' src='__JS_PATH__jquery-migrate.min.js'></script>
+<script type='text/javascript' src='__JS_PATH__jquery-1.10.2.min.js'></script>
+<script type='text/javascript' src='__JS_PATH__jquery.carouFredSel-6.2.1-packed.js'></script>
+<script type='text/javascript' src='__JS_PATH__hoverIntent.js'></script>
+<script type='text/javascript' src='__JS_PATH__superfish.js'></script>
+<script type='text/javascript' src='__JS_PATH__orbit.min.js'></script>
+ <script src="__JS_PATH__css3-mediaqueries.js"></script>
+</head>
+
+<body class="page page-id-56 page-template-default">
+
+	<!-- Start Header -->
+    <div class="container zerogrid">
+        <div class="col-full"><div class="wrap-col">
+            <div id="header-nav-container">
+            
+                    <a href="#">
+                    <img src="__IMG_PATH__/logo.png" id="logo" />
+                    </a>
+                    
+                    <!-- Navigation Menu -->
+                    
+    <ul class="sf-menu"><li class="menu-item "><a href="__WEB_SITE__">首页</a></li>
+    <li class="menu-item"><a href="__WEB_SITE__?m=index&c=blog&a=blog&zid={$sblog[0]['zid']}">博客</a></li>
+
+    {if empty($_SESSION)}
+    <li class="menu-item"><a href="__WEB_SITE__?m=index&c=user&a=regist">
+    登录注册</a></li>
+    {else}
+    <li class="menu-item"><a href="__WEB_SITE__">
+        你好，{$name}
+        </a>
+        <ul class="sub-menu">
+            <form action="__WEB_SITE__index.php?m=index&c=about&a=about" method="post" />
+                <li class="menu-item">
+                  <span style="padding:10px;color:#AAAAAA;font-size:15px;">真的要退出吗？</span> 
+                  <input style="width:50px;height:25px;margin:10px;" type="submit" name="tuichu" value="退出" />
+                </li>
+                {if $_SESSION['level'] == 1}
+                <li class="menu-item">
+                    <a href="__WEB_SITE__?m=index&c=fablog&a=fablog">发博客</a>
+                </li>
+                <li class="menu-item">
+                    <a href="__WEB_SITE__?m=admin&c=login&a=login">后台管理</a>
+                </li>
+               {/if}
+            </form>
+        </ul>
+    </li>
+    
+    
+    {/if}
+
+<!--<ul class="sub-menu">
+    <li class="menu-item">
+        <a href="#">Menu 01</a>
+    </li>
+    <li class="menu-item"><a href="#">Menu 02</a></li>
+    <li class="menu-item"><a href="#">Menu 03</a></li>
+</ul>-->
+
+<li class="menu-item current-menu-item"><a href="__WEB_SITE__?m=index&c=about&a=about">关于我</a></li>
+</ul>   
+                    <!-- End Navigation Menu -->
+                    
+                    <div class="clear"></div>
+                    
+            </div>
+            </div>
+        </div>
+    <div class="clear"></div> 
+    </div>
+
+    <div class="spacing-30"></div>
+    <!-- End Header -->
+    
+    
+    <!-- Start Main Container -->
+    <div class="container zerogrid">
+        
+    <div class="col-full page-conainer">
+	<div class="wrap-col">
+    <div class="post-margin">
+    <h5 class="page-title">关于我</h5>
+    
+    <!-- Start Entry -->
+    <p>姓名：黄春杰</p>
+    <p>电话：15726660511</p>
+
+
+<div class="symple-clear-floats"></div>
+    <!-- End Entry -->
+    
+    </div>
+	</div>
+    </div>
+    
+    <div class="clear"></div>
+        </div>
+	<!-- End Main Container -->
+	
+	
+    
+    
+    <!-- Start Footer -->
+    <div class="spacing-30"></div>
+    <div class="container zerogrid">
+        <div id="footer-container" class="col-full">
+        <div class="wrap-col">	
+            <!-- Footer Copyright -->
+            <p>&copy; Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+            <!-- End Footer Copyright -->
+            
+            <!-- Footer Logo -->
+			<img src="__IMG_PATH__/footer-logo.png" id="footer-logo" />
+            <!-- End Footer Logo -->
+        
+        <div class="clear"></div>
+		</div>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

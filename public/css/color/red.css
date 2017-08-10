@@ -1,0 +1,29 @@
+/* Main Style */
+a:hover{ color:#e74c3c; }
+.post .post-social .readmore{ background:#e74c3c; }
+.post .post-social a:hover{ background:#e74c3c; }
+.post-icon .fa-inverse{ color:#e74c3c; }
+.pagination li a:hover{ background:#e74c3c; }
+.pagination li.current a{ background:#e74c3c; }
+.widget-container .searchform #searchsubmit{ background:#e74c3c; }
+.tagcloud a:hover{ background:#e74c3c;}
+.comment-header a{ color:#e74c3c; }
+#comment-submit:hover{ background:#e74c3c; }
+.logged-in-as a{ color:#e74c3c; }
+.carousel-item h6 a:hover{ color:#e74c3c; }
+
+.carousel-controls a:hover{ background:#e74c3c; color:#FFFFFF }
+
+.widget-carousel-item h6 a:hover{ color:#e74c3c; }
+.widget-carousel-controls a:hover{ background:#e74c3c; }
+
+/* Orbit Slider */
+div.slider-nav span.right:hover{ background:#e74c3c; }
+div.slider-nav span.left:hover{ background:#e74c3c; }
+
+/* Super Fish */
+.sf-menu li:hover,
+.sf-menu li.sfHover { background: #e74c3c; }
+
+.sf-menu li.current{ background: #e74c3c; }
+.sf-menu li.current-menu-item{ background: #e74c3c; }
